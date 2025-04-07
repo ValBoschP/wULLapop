@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear nuevo anuncio - WULLapop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip Link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo_wullapop.png" alt="WULLapop Logo" height="30" class="d-inline-block align-text-top me-2 rounded">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="marketplace.html">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="create-listing.html">Publicar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="profile.html" class="btn btn-outline-light me-2">
+                        <i class="fas fa-user me-1"></i>Mi perfil
+                    </a>
+                    <a href="#" class="btn btn-light">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container py-5" id="main-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h1 class="h3 mb-4">Crear nuevo anuncio</h1>
+                        
+                        <form>
+                            <!-- Tipo de anuncio -->
+                            <div class="mb-4">
+                                <label class="form-label fw-medium">Tipo de anuncio</label>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <input type="radio" class="btn-check" name="listing-type" id="type-notes" checked>
+                                        <label class="btn btn-outline-purple w-100 d-flex flex-column align-items-center p-3" for="type-notes">
+                                            <i class="fas fa-file-alt fs-3 mb-2"></i>
+                                            <span>Apuntes</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="btn-check" name="listing-type" id="type-classes">
+                                        <label class="btn btn-outline-purple w-100 d-flex flex-column align-items-center p-3" for="type-classes">
+                                            <i class="fas fa-chalkboard-teacher fs-3 mb-2"></i>
+                                            <span>Clases</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="radio" class="btn-check" name="listing-type" id="type-exams">
+                                        <label class="btn btn-outline-purple w-100 d-flex flex-column align-items-center p-3" for="type-exams">
+                                            <i class="fas fa-tasks fs-3 mb-2"></i>
+                                            <span>Exámenes</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Título del anuncio -->
+                            <div class="mb-4">
+                                <label for="listing-title" class="form-label fw-medium">Título del anuncio <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="listing-title" placeholder="Ej: Apuntes completos Química Orgánica 2023" required>
+                                <div class="form-text">Elige un título descriptivo para que otros usuarios encuentren tu contenido fácilmente.</div>
+                            </div>
+                            
+                            <!-- Categoría académica -->
+                            <div class="mb-4">
+                                <label for="academic-category" class="form-label fw-medium">Categoría académica <span class="text-danger">*</span></label>
+                                <select class="form-select" id="academic-category" required>
+                                    <option value="" selected disabled>Selecciona una categoría</option>
+                                    <option value="ciencias">Ciencias</option>
+                                    <option value="ingenieria">Ingeniería</option>
+                                    <option value="matematicas">Matemáticas</option>
+                                    <option value="medicina">Medicina</option>
+                                    <option value="derecho">Derecho</option>
+                                    <option value="economia">Economía</option>
+                                    <option value="humanidades">Humanidades</option>
+                                    <option value="informatica">Informática</option>
+                                    <option value="idiomas">Idiomas</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Nivel educativo -->
+                            <div class="mb-4">
+                                <label for="education-level" class="form-label fw-medium">Nivel educativo <span class="text-danger">*</span></label>
+                                <select class="form-select" id="education-level" required>
+                                    <option value="" selected disabled>Selecciona un nivel</option>
+                                    <option value="universidad">Universidad</option>
+                                    <option value="bachillerato">Bachillerato</option>
+                                    <option value="formacion-profesional">Formación Profesional</option>
+                                    <option value="eso">ESO</option>
+                                    <option value="primaria">Primaria</option>
+                                    <option value="oposiciones">Oposiciones</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Descripción -->
+                            <div class="mb-4">
+                                <label for="listing-description" class="form-label fw-medium">Descripción <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="listing-description" rows="5" placeholder="Describe con detalle lo que ofreces, temario que abarca, etc." required></textarea>
+                                <div class="form-text">Sé específico sobre el contenido, el formato, y por qué es valioso para otros estudiantes.</div>
+                            </div>
+                            
+                            <!-- Precio -->
+                            <div class="mb-4">
+                                <label class="form-label fw-medium">Precio <span class="text-danger">*</span></label>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="radio" class="btn-check" name="price-type" id="price-free" checked>
+                                        <label class="btn btn-outline-success w-100" for="price-free">
+                                            <i class="fas fa-gift me-2"></i>Gratis
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="radio" class="btn-check" name="price-type" id="price-paid">
+                                        <label class="btn btn-outline-success w-100" for="price-paid">
+                                            <i class="fas fa-euro-sign me-2"></i>De pago
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div id="paid-price-container" class="mt-3 d-none">
+                                    <div class="input-group">
+                                        <span class="input-group-text">€</span>
+                                        <input type="number" class="form-control" id="listing-price" placeholder="0.00" min="0.50" step="0.01">
+                                    </div>
+                                    <div class="form-text">Precio mínimo: 0,50€. Comisión de la plataforma: 10%.</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Subir archivos -->
+                            <div class="mb-4">
+                                <label class="form-label fw-medium">Archivos <span class="text-danger">*</span></label>
+                                <div class="card bg-light">
+                                    <div class="card-body text-center p-4">
+                                        <i class="fas fa-cloud-upload-alt fs-1 text-primary mb-3"></i>
+                                        <h5>Arrastra tus archivos aquí</h5>
+                                        <p class="text-muted mb-3">o</p>
+                                        <input type="file" id="file-upload" class="d-none" multiple>
+                                        <label for="file-upload" class="btn btn-primary">
+                                            <i class="fas fa-folder-open me-2"></i>Seleccionar archivos
+                                        </label>
+                                        <p class="small text-muted mt-2">Formatos aceptados: PDF, DOC, DOCX, PPT, PPTX, XLS, XLSX. Tamaño máximo: 50MB</p>
+                                    </div>
+                                </div>
+                                
+                                <div id="file-list" class="mt-3">
+                                    <!-- Aquí se mostrarán los archivos subidos -->
+                                </div>
+                            </div>
+                            
+                            <!-- Vista previa -->
+                            <div class="mb-4">
+                                <label class="form-label fw-medium">Vista previa <span class="text-danger">*</span></label>
+                                <div class="card bg-light">
+                                    <div class="card-body text-center p-4">
+                                        <i class="fas fa-image fs-1 text-primary mb-3"></i>
+                                        <h5>Añade una imagen de vista previa</h5>
+                                        <p class="text-muted mb-3">Los anuncios con imagen reciben un 70% más de visitas</p>
+                                        <input type="file" id="preview-upload" class="d-none" accept="image/*">
+                                        <label for="preview-upload" class="btn btn-primary">
+                                            <i class="fas fa-upload me-2"></i>Subir imagen
+                                        </label>
+                                        <p class="small text-muted mt-2">Formatos aceptados: JPG, PNG. Tamaño máximo: 5MB</p>
+                                    </div>
+                                </div>
+                                
+                                <div id="preview-container" class="mt-3 d-none">
+                                    <img src="/api/placeholder/400/320" alt="Vista previa" class="img-fluid rounded">
+                                </div>
+                            </div>
+                            
+                            <!-- Etiquetas -->
+                            <div class="mb-4">
+                                <label for="listing-tags" class="form-label fw-medium">Etiquetas</label>
+                                <input type="text" class="form-control" id="listing-tags" placeholder="Ej: química, apuntes, universidad">
+                                <div class="form-text">Añade palabras clave separadas por comas para hacer tu anuncio más visible.</div>
+                            </div>
+                            
+                            <!-- Términos y condiciones -->
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms-check" required>
+                                    <label class="form-check-label" for="terms-check">
+                                        Acepto los <a href="terms.html" target="_blank">términos y condiciones</a> y confirmo que tengo los derechos sobre este contenido.
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- Botones -->
+                            <div class="d-flex justify-content-between mt-5">
+                                <button type="button" class="btn btn-outline-secondary">
+                                    <i class="fas fa-save me-2"></i>Guardar borrador
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Publicar anuncio
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>WULLapop</h5>
+                    <p>Plataforma de intercambio académico desarrollada por estudiantes de Ingeniería Informática de la Universidad de La Laguna.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="marketplace.html" class="text-white">Marketplace</a></li>
+                        <li><a href="faq.html" class="text-white">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-white">Política de cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 WULLapop - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para la funcionalidad de la página -->
+    <script>
+        // Mostrar/ocultar campo de precio según selección
+        document.getElementById('price-free').addEventListener('change', function() {
+            document.getElementById('paid-price-container').classList.add('d-none');
+        });
+        
+        document.getElementById('price-paid').addEventListener('change', function() {
+            document.getElementById('paid-price-container').classList.remove('d-none');
+        });
+        
+        // Funcionalidad para subida de archivos
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const fileList = document.getElementById('file-list');
+            fileList.innerHTML = ''; // Limpiar lista
+            
+            if (this.files.length > 0) {
+                const fileListContainer = document.createElement('div');
+                fileListContainer.className = 'list-group';
+                
+                Array.from(this.files).forEach(file => {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    
+                    // Determinar icono según tipo de archivo
+                    let fileIcon = 'fa-file';
+                    if (file.name.endsWith('.pdf')) fileIcon = 'fa-file-pdf';
+                    else if (file.name.endsWith('.doc') || file.name.endsWith('.docx')) fileIcon = 'fa-file-word';
+                    else if (file.name.endsWith('.xls') || file.name.endsWith('.xlsx')) fileIcon = 'fa-file-excel';
+                    else if (file.name.endsWith('.ppt') || file.name.endsWith('.pptx')) fileIcon = 'fa-file-powerpoint';
+                    
+                    fileItem.innerHTML = `
+                        <div>
+                            <i class="fas ${fileIcon} text-primary me-2"></i>
+                            ${file.name}
+                            <span class="badge bg-light text-dark rounded-pill ms-2">${(file.size / (1024 * 1024)).toFixed(2)} MB</span>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-danger">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+                    
+                    fileListContainer.appendChild(fileItem);
+                });
+                
+                fileList.appendChild(fileListContainer);
+            }
+        });
+        
+        // Funcionalidad para imagen de vista previa
+        document.getElementById('preview-upload').addEventListener('change', function(e) {
+            const previewContainer = document.getElementById('preview-container');
+            
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    previewContainer.classList.remove('d-none');
+                    previewContainer.querySelector('img').src = e.target.result;
+                }
+                
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>

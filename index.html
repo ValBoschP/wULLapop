@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WULLapop - Intercambio de apuntes y clases particulares ULL</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo_wullapop.png" alt="WULLapop Logo" height="30" class="d-inline-block align-text-top me-2 rounded">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="marketplace.html">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-listing.html">Publicar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Iniciar Sesión</a>
+                    <a href="register.html" class="btn btn-light">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <header class="bg-purple text-white text-center py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-lg-start">
+                    <h1 class="display-4 fw-bold mb-4">Intercambia conocimiento en la ULL</h1>
+                    <p class="lead mb-4">Compra y vende apuntes de calidad o recibe clases particulares de compañeros con experiencia. Mejora tus calificaciones y ahorra tiempo.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-start">
+                        <a href="marketplace.html" class="btn btn-lg btn-light px-4 gap-3">Explorar</a>
+                        <a href="register.html" class="btn btn-lg btn-outline-light px-4">Únete ahora</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="img/estudiantes_colaborando.png" alt="Estudiantes colaborando" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">¿Por qué WULLapop?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-purple-light text-purple mb-3">
+                                <i class="fas fa-file-alt fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title">Apuntes verificados</h3>
+                            <p class="card-text">Los apuntes son revisados y valorados por la comunidad estudiantil para garantizar su calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-purple-light text-purple mb-3">
+                                <i class="fas fa-chalkboard-teacher fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title">Clases personalizadas</h3>
+                            <p class="card-text">Conecta con estudiantes avanzados que han superado tus asignaturas con excelentes calificaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="feature-icon bg-purple-light text-purple mb-3">
+                                <i class="fas fa-shield-alt fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title">Seguridad y confianza</h3>
+                            <p class="card-text">Sistema de valoraciones y verificación de perfiles para crear un entorno seguro y confiable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">¿Cómo funciona?</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="step-icon bg-purple text-white mb-3">1</div>
+                        <h3 class="h5">Regístrate</h3>
+                        <p>Crea tu cuenta con tu correo de la ULL para acceder a todas las funciones.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="step-icon bg-purple text-white mb-3">2</div>
+                        <h3 class="h5">Explora</h3>
+                        <p>Busca apuntes o tutores según tus necesidades académicas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="step-icon bg-purple text-white mb-3">3</div>
+                        <h3 class="h5">Contacta</h3>
+                        <p>Chatea con el vendedor y acuerda los detalles de la compra o clase.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <div class="step-icon bg-purple text-white mb-3">4</div>
+                        <h3 class="h5">¡Aprende!</h3>
+                        <p>Recibe tus apuntes o asiste a tus clases y mejora tu rendimiento académico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Lo que dicen nuestros usuarios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/perfil1.png" alt="Usuario" class="rounded-circle me-3" style="width: 64px; height: 64px; object-fit: cover;">
+                                <div>
+                                    <h5 class="mb-0">Laura Rodríguez</h5>
+                                    <div class="text-purple">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"Los apuntes que compré me ayudaron a entender conceptos que me costaban mucho. ¡Aprobé con nota!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/perfil2.png" alt="Usuario" class="rounded-circle me-3" style="width: 64px; height: 64px; object-fit: cover;">
+                                <div>
+                                    <h5 class="mb-0">Carlos Gómez</h5>
+                                    <div class="text-purple">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"Las clases particulares con Miguel me salvaron el semestre. Explica mucho mejor que algunos profesores."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/perfil3.png" alt="Usuario" class="rounded-circle me-3" style="width: 64px; height: 64px; object-fit: cover;">
+                                <div>
+                                    <h5 class="mb-0">Ana Martínez</h5>
+                                    <div class="text-purple">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="card-text">"Vender mis apuntes me ha permitido ganar un dinero extra mientras ayudo a otros estudiantes. Plataforma muy intuitiva."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-purple text-white text-center">
+        <div class="container">
+            <h2 class="mb-4">¿Listo para mejorar tus resultados académicos?</h2>
+            <p class="lead mb-4">Únete a la comunidad WULLapop y transforma tu experiencia universitaria</p>
+            <a href="register.html" class="btn btn-lg btn-light">Comenzar ahora</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>WULLapop</h5>
+                    <p>Plataforma de intercambio académico desarrollada por estudiantes de Ingeniería Informática de la Universidad de La Laguna.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Inicio</a></li>
+                        <li><a href="marketplace.html" class="text-white">Marketplace</a></li>
+                        <li><a href="faq.html" class="text-white">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="text-white">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-white">Política de cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 WULLapop - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
