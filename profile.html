@@ -11,12 +11,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="img/logo_wullapop.png" alt="WULLapop Logo" height="30" class="me-2 rounded">
-        WULLapop
       </a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
@@ -35,72 +33,84 @@
 
     <div class="row">
       <!-- Información del usuario -->
-      <div class="col-md-4 mb-4">
-        <div class="card card-user-info shadow-sm">
-          <div class="card-body">
-            <h4 class="card-title mb-3">Información personal</h4>
-            <p><strong>Nombre:</strong> Juana Rodríguez</p>
-            <p><strong>Email:</strong> juana.rodriguez@ull.edu.es</p>
-            <p><strong>Miembro desde:</strong> febrero 2024</p>
-
-            <div class="d-grid gap-2 mt-4">
-              <a href="#" class="btn btn-outline-secondary">Editar información</a>
-              <button class="btn btn-outline-warning" onclick="confirmDeleteListings()">Eliminar mis anuncios</button>
-              <button class="btn btn-outline-danger" onclick="confirmDeleteAccount()">Eliminar cuenta</button>
-            </div>
+    <div class="col-md-4 mb-4">
+      <div class="card card-user-info shadow-sm text-center p-3">
+        <img src="" alt="Foto de perfil" class="profile-pic mx-auto">
+        <div class="card-body">
+          <h4 class="card-title mb-3">Juana Rodríguez</h4>
+          <p><strong>Email:</strong> juana.rodriguez@ull.edu.es</p>
+          <p><strong>Miembro desde:</strong> febrero 2024</p>
+        
+          <div class="d-grid gap-2 mt-4">
+            <a href="#" class="btn btn-outline-secondary">Editar información</a>
+            <a href="#" class="btn btn-outline-warning" onclick="confirmDeleteListings()">Eliminar mis anuncios</a>
+            <a href="index.html" class="btn btn-outline-danger" onclick="confirmDeleteAccount()">Eliminar cuenta</a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Anuncios publicados -->
+
+      <!-- Reemplaza el contenido del div.col-md-8 por esto -->
+<div class="col-md-8">
+  <h4 class="mb-3">Mis anuncios publicados</h4>
+
+  <div class="card mb-3 shadow-sm">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="img/progrmacion.png" class="img-fluid rounded-start" alt="Apuntes de Programación">
+      </div>
       <div class="col-md-8">
-        <h4 class="mb-3">Mis anuncios publicados</h4>
-
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-          <!-- Card de anuncio (esto se repetiría dinámicamente) -->
-          <div class="col">
-            <div class="card ad-card h-100">
-              <img src="img/anuncio1.jpg" class="card-img-top" alt="Producto 1">
-              <div class="card-body">
-                <h5 class="card-title">Nintendo Switch</h5>
-                <p class="card-text text-muted">Usada, en buen estado. Incluye cargador y estuche.</p>
-                <p class="fw-bold">190 €</p>
-              </div>
-              <div class="card-footer bg-white border-top-0 d-flex justify-content-between">
-                <a href="edit-listing.html?id=1" class="btn btn-sm btn-outline-primary">Editar</a>
-                <button class="btn btn-sm btn-outline-danger" onclick="deleteListing(1)">Eliminar</button>
-              </div>
-            </div>
+        <div class="card-body">
+          <h5 class="card-title">Apuntes de Informática Básica - ULL</h5>
+          <p class="card-text text-muted">PDF con esquemas, resúmenes de teoría y ejercicios resueltos. Curso 2023/24. Perfectos para prepararse para el examen final.</p>
+          <p class="fw-bold mb-2">5 €</p>
+          <div class="d-flex justify-content-end gap-2">
+            <a href="edit-listing.html?id=101" class="btn btn-sm btn-outline-primary">Editar</a>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteListing(101)">Eliminar</button>
           </div>
-
-          <!-- Otro anuncio (más tarjetas similares) -->
-          <div class="col">
-            <div class="card ad-card h-100">
-              <img src="img/anuncio2.jpg" class="card-img-top" alt="Producto 2">
-              <div class="card-body">
-                <h5 class="card-title">Patinete eléctrico Xiaomi</h5>
-                <p class="card-text text-muted">Batería nueva. Poco uso. Entrego con cargador.</p>
-                <p class="fw-bold">280 €</p>
-              </div>
-              <div class="card-footer bg-white border-top-0 d-flex justify-content-between">
-                <a href="edit-listing.html?id=2" class="btn btn-sm btn-outline-primary">Editar</a>
-                <button class="btn btn-sm btn-outline-danger" onclick="deleteListing(2)">Eliminar</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Puedes repetir más cards según los anuncios del usuario -->
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Puedes añadir más tarjetas si tienes más apuntes -->
+</div>
+
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4 mt-5">
+  <footer class="bg-dark text-white py-4">
     <div class="container">
-      <p class="mb-0">&copy; 2025 WULLapop - Todos los derechos reservados</p>
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5>WULLapop</h5>
+                <p>Plataforma de intercambio académico desarrollada por estudiantes de Ingeniería Informática de la Universidad de La Laguna.</p>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">Inicio</a></li>
+                    <li><a href="marketplace.html" class="text-white">Marketplace</a></li>
+                    <li><a href="faq.html" class="text-white">Preguntas frecuentes</a></li>
+                    <li><a href="#" class="text-white">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li><a href="legal/term-cond.html" class="text-white">Términos y condiciones</a></li>
+                    <li><a href="legal/pol-priv.html" class="text-white">Política de privacidad</a></li>
+                    <li><a href="legal/pol-cookies.html" class="text-white">Política de cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="text-center">
+            <p class="mb-0">&copy; 2025 WULLapop - Todos los derechos reservados</p>
+        </div>
     </div>
-  </footer>
+</footer>
 
   <script>
     function confirmDeleteAccount() {
