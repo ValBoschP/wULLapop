@@ -1,6 +1,128 @@
-<!--
-PONER QUE ESTA EN DESARROLLO
--->
-<div style="text-align: center;"></div>
-  Esta página está en desarrollo.
-</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Perfil - WULLapop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_wullapop.png" alt="WULLapop Logo" height="30" class="me-2 rounded">
+        WULLapop
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="marketplace.html">Marketplace</a></li>
+          <li class="nav-item"><a class="nav-link" href="create-listing.html">Publicar</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <a href="logout.html" class="btn btn-outline-light">Cerrar sesión</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Perfil -->
+  <main class="container py-5">
+    <h1 class="mb-4 text-center">Mi Perfil</h1>
+
+    <div class="row">
+      <!-- Información del usuario -->
+      <div class="col-md-4 mb-4">
+        <div class="card card-user-info shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title mb-3">Información personal</h4>
+            <p><strong>Nombre:</strong> Juana Rodríguez</p>
+            <p><strong>Email:</strong> juana.rodriguez@ull.edu.es</p>
+            <p><strong>Miembro desde:</strong> febrero 2024</p>
+
+            <div class="d-grid gap-2 mt-4">
+              <a href="#" class="btn btn-outline-secondary">Editar información</a>
+              <button class="btn btn-outline-warning" onclick="confirmDeleteListings()">Eliminar mis anuncios</button>
+              <button class="btn btn-outline-danger" onclick="confirmDeleteAccount()">Eliminar cuenta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Anuncios publicados -->
+      <div class="col-md-8">
+        <h4 class="mb-3">Mis anuncios publicados</h4>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Card de anuncio (esto se repetiría dinámicamente) -->
+          <div class="col">
+            <div class="card ad-card h-100">
+              <img src="img/anuncio1.jpg" class="card-img-top" alt="Producto 1">
+              <div class="card-body">
+                <h5 class="card-title">Nintendo Switch</h5>
+                <p class="card-text text-muted">Usada, en buen estado. Incluye cargador y estuche.</p>
+                <p class="fw-bold">190 €</p>
+              </div>
+              <div class="card-footer bg-white border-top-0 d-flex justify-content-between">
+                <a href="edit-listing.html?id=1" class="btn btn-sm btn-outline-primary">Editar</a>
+                <button class="btn btn-sm btn-outline-danger" onclick="deleteListing(1)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Otro anuncio (más tarjetas similares) -->
+          <div class="col">
+            <div class="card ad-card h-100">
+              <img src="img/anuncio2.jpg" class="card-img-top" alt="Producto 2">
+              <div class="card-body">
+                <h5 class="card-title">Patinete eléctrico Xiaomi</h5>
+                <p class="card-text text-muted">Batería nueva. Poco uso. Entrego con cargador.</p>
+                <p class="fw-bold">280 €</p>
+              </div>
+              <div class="card-footer bg-white border-top-0 d-flex justify-content-between">
+                <a href="edit-listing.html?id=2" class="btn btn-sm btn-outline-primary">Editar</a>
+                <button class="btn btn-sm btn-outline-danger" onclick="deleteListing(2)">Eliminar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Puedes repetir más cards según los anuncios del usuario -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 WULLapop - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script>
+    function confirmDeleteAccount() {
+      if (confirm("¿Estás segura de que deseas eliminar tu cuenta? Esta acción no se puede deshacer.")) {
+        // Aquí se haría la llamada al backend
+        alert("Cuenta eliminada correctamente.");
+      }
+    }
+
+    function confirmDeleteListings() {
+      if (confirm("¿Seguro que deseas eliminar todos tus anuncios? Esta acción no se puede deshacer.")) {
+        // Aquí se haría la llamada al backend
+        alert("Anuncios eliminados.");
+      }
+    }
+
+    function deleteListing(id) {
+      if (confirm("¿Deseas eliminar este anuncio?")) {
+        // Aquí se haría la llamada al backend con el ID
+        alert("Anuncio con ID " + id + " eliminado.");
+      }
+    }
+  </script>
+</body>
+</html>
